@@ -1,11 +1,11 @@
 import streamlit as st
-import pickle
+import joblib
 import re
 from sklearn.preprocessing import LabelEncoder
 
 # Muat model yang sudah dilatih
-model = pickle.load('best_model.pkl')
-vectorizer=pickle.load('best_vectorizer.pkl')
+model = joblib.load('best_model.pkl')
+vectorizer=joblib.load('best_vectorizer.pkl')
 # Form input feedback
 st.title("Feedback Pelayanan")
 feedback = st.text_area("Masukkan feedback:")
